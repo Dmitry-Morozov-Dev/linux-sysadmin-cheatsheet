@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Справочник Linux-команд для системного администратора</title>
+<meta name="description" content="Команды Linux, флаги и готовые связки с понятным описанием для системного администратора: файлы, процессы, systemd, диски, LVM, сеть, SSH, firewall, мониторинг, безопасность, контейнеры.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <h1>Справочник Linux-команд для системного администратора</h1>
+    <p class="summary" id="summary"></p>
+    <button id="theme" class="btn" type="button" title="Сменить тему">Тема: авто</button>
+  </div>
+</header>
+<div class="wrap layout">
+  <nav class="toc" id="toc" aria-label="Содержание"><h2>Содержание</h2><ul id="tocList"></ul></nav>
+  <main>
+    <section id="plan" class="block">
+      <h2>План этапов</h2>
+      <ul class="checklist" id="stages"></ul>
+      <p>Все пять этапов готовы (25 октября 2026).</p>
+    </section>
+    <section id="filter" class="block filters">
+      <h2>Поиск и фильтр</h2>
+      <label class="field"><span>Поиск по командам, флагам и примерам</span>
+        <input id="q" type="search" placeholder="например: tail, права, sudo, -exec" autocomplete="off"></label>
+      <label class="field"><span>Раздел</span><select id="cat"></select></label>
+      <label class="toggle"><input id="danger" type="checkbox"><span>Только опасные команды и связки</span></label>
+      <div class="actions"><button class="btn" id="expand" type="button">Раскрыть все</button><button class="btn" id="collapse" type="button">Свернуть все</button><button class="btn" id="reset" type="button">Сбросить фильтр</button></div>
+      <p id="status" class="status"></p>
+    </section>
+    <div id="content"></div>
+    <section class="block" id="sources"><h2>Источники</h2><ol id="srcList"></ol></section>
+  </main>
+</div>
+<footer class="wrap foot">Справочник собран по man-страницам и документации дистрибутивов. Команды, отмеченные «Опасно», запускайте осознанно.</footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
